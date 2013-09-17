@@ -1,0 +1,52 @@
+<table>
+
+<tr>
+	<td>
+	<h5>business_name</h5>
+	</td>
+	<td>
+	<h5>street_address</h5>
+	</td>
+	<td>
+	<h5>postcode</h5>
+	</td>
+	<td>
+	<h5>region</h5>
+	</td>
+	<td>
+	<h5>business_phone</h5>
+	</td>
+	<td>
+	<h5>business_email</h5>
+	</td>
+	<td>
+	<h5>website</h5>
+	</td>
+</tr>
+
+
+<% @results.all.each do |r| %>
+	<tr>
+		<td>
+		<%= r.business_name %>
+		</td>
+		<td>
+		<%= r.street_address %>
+		</td>
+		<td>
+		<%= r.postcode %>
+		</td>
+		<td>
+		<%= r.region %>
+		</td>
+		<td>
+		<%= r.business_phone %>
+		</td>
+		<td>
+		<%= r.business_email %>
+		</td>
+		<td>
+		<%= r.website %>
+		</td>
+	</tr>
+<% end %>
