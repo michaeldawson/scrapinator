@@ -3,7 +3,7 @@ desc "fetch gym data"
 namespace :get_data do
 	task :fetch => :environment do
 	require 'open-uri'
-		(72333..72401).each do |i|
+		(1000..72401).each do |i|
 			s = i.to_s.rjust(6, '0')
 
 			puts "entry #{s}"
