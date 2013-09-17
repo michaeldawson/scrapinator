@@ -3,6 +3,6 @@ class StaticController < ApplicationController
   	@count = Result.count
   	@start = ENV['sprint_start']
   	@stop = ENV['sprint_stop']
-  	@last_index = Result.last.key
+  	@last_index = Result.last.key if Result.last
   end
 end
