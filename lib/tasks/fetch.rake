@@ -3,7 +3,7 @@ desc "fetch gym data"
 namespace :get_data do
 	task :fetch => :environment do
 	require 'open-uri'
-		(ENV['sprint_start']l.to_i..ENV['sprint_stop'].to_i).each do |i|
+		(ENV['sprint_start'].to_i..ENV['sprint_stop'].to_i).each do |i|
 			s = i.to_s.rjust(6, '0')
 
 			puts "entry #{s}"
