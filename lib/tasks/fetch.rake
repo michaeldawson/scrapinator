@@ -16,7 +16,7 @@ namespace :get_data do
 
 			result = Result.new
 
-			if !results[0].text.gsub(/[^0-9a-z ]/i, '').empty?
+			#if !results[0].text.gsub(/[^0-9a-z ]/i, '').empty?
 				result.key = i
 				result.business_name = results[0].text.gsub(/[^0-9a-z ]/i, '')
 				result.street_address = results[1].text.gsub(/[^0-9a-z ]/i, '')
@@ -26,9 +26,9 @@ namespace :get_data do
 				result.business_email = results[5].text
 				result.website = results[6].text
 				puts result.save
-			else
-				puts "false"
-			end
+			#else
+			#	puts "false"
+			#end
 
 			# street = doc.at_css(".output")
 			#ext-gen36
