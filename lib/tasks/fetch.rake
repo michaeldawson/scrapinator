@@ -3,7 +3,7 @@ desc "fetch gym data"
 namespace :get_data do
 	task :fetch => :environment do
 	require 'open-uri'
-		(1000..72401).each do |i|
+		(ENV['sprint_start']l.to_i..ENV['sprint_stop'].to_i).each do |i|
 			s = i.to_s.rjust(6, '0')
 
 			puts "entry #{s}"
@@ -16,7 +16,7 @@ namespace :get_data do
 
 			result = Result.new
 
-			if !results[0].text.empty?
+			if !results[0].text.gsub(/[^0-9a-z ]/i, '').empty?
 				result.key = i
 				result.business_name = results[0].text.gsub(/[^0-9a-z ]/i, '')
 				result.street_address = results[1].text.gsub(/[^0-9a-z ]/i, '')

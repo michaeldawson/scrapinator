@@ -3,9 +3,15 @@
 <h1>The dynamically widgetized scrapinator</h1>
 <h3>Scraping fitness records since 2013</h3>
 
-<span>Records scraped:</span>
-<span><%= @count %></span>
+Currently set to scrape records with ids ranging from <%= @start %> to <%= @stop %>
 
-<span><%= link_to "See them in their glory", results_path %>
+<br/><br/>
+
+<span>Records scraped:</span>
+<span><%= @count %> (up to number <%= @last_index %>)</span>
+
+<br/><br/>
+
+<span><h3><%= link_to "See them in their glory", results_path %></h3></span>
 
 </div>
