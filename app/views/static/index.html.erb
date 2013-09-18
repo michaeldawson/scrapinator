@@ -12,6 +12,8 @@ Currently set to scrape records with ids ranging from <%= @start %> to <%= @stop
 
 <br/><br/>
 
-<span><h3><%= link_to "See them in their glory", results_path %></h3></span>
+<span><h3><%= link_to "See them in their glory", results_path, confirm: "HOLD ON TO YOUR HORSES, THIS MIGHT TAKE A WHILE" %></h3></span>
+<br/><span>or <h3><%= link_to "Download the csv", results_path(format: "csv"), confirm: "HOLD ON TO YOUR HORSES, THIS MIGHT TAKE A WHILE" %></h3></span>
+
 
 </div>
