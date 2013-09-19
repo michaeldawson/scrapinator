@@ -4,7 +4,7 @@ namespace :get_data do
 	task :fetch => :environment do
 	require 'open-uri'
 		# (ENV['sprint_start'].to_i..ENV['sprint_stop'].to_i).each do |i|
-		(72401..72401).each do |i|
+		(ENV['sprint_start'].to_i..ENV['sprint_stop'].to_i).each do |i|
 
 			s = i.to_s.rjust(6, '0')
 
