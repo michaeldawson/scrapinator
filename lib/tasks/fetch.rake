@@ -27,7 +27,7 @@ namespace :get_data do
 				result.business_phone = results[4].text.gsub(/[^0-9a-z ]/i, '')
 				result.business_email = results[5].text
 				result.website = results[6].text
-				puts results.inspect
+
 				puts result.save
 			#else
 			#	puts "false"
